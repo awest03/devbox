@@ -31,7 +31,13 @@ xcb-util-wm
 xorg-x11-drv-nvidia-cuda
 meson
 php
+hugo
 vulkan-headers
 vulkan-tools
 vulkan-loader
 vulkan-loader-devel
+mesa-libGL-devel
+libXcursor-devel
+libXrandr-devel
+libudev-devel
+texlive-scheme-full
