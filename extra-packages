@@ -40,3 +40,4 @@ mesa-libGL-devel
 libXcursor-devel
 libXrandr-devel
 libudev-devel
+g++
