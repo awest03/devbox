@@ -22,6 +22,16 @@ RUN dnf -y update && \
     grep -v '^#' /extra-packages | xargs dnf -y install
 RUN rm /extra-packages
 
+# Install GameNetworkingSockets
+RUN git clone https://github.com/ValveSoftware/GameNetworkingSockets.git
+RUN cd GameNetworkingSockets && \
+    mkdir build && \
+    cd build && \
+    cmake -G Ninja .. && \
+    ninja && \
+    ninja install
+COPY local.conf /etc/ld.so.conf.d/
+
 #RUN   ln -fs /bin/sh /usr/bin/sh && \
 #      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
 #      ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \ 

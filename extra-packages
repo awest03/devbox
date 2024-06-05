@@ -41,3 +41,7 @@ libXcursor-devel
 libXrandr-devel
 libudev-devel
 g++
+openssl-devel
+protobuf-devel
+protobuf-compiler
+cmake
